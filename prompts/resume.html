@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume PromptCraft</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 18px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+      padding-top: 80px;
+    }
+
+    section {
+      display: none;
+      background-color: #fff;
+      padding: 40px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: fade 0.4s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h3, p, li {
+      color: #222;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      color: #222 !important;
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+      opacity: 1 !important;
+    }
+  
+    p {
+      color: #222 !important;
+      font-size: 16px !important;
+      line-height: 1.7 !important;
+      opacity: 1 !important;
+      filter: none !important;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .arrow {
+      font-size: 28px;
+      background-color: #007bff;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .arrow:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back to Home -->
+  <a href="../index.html" class="back-button">← Home</a>
+
+  <div class="container">
+    <!-- Section 1: Introduction to Prompting -->
+    <section id="section1" class="active">
+      <h1>Resume Prompts</h1>
+      <p><strong>Prompting</strong> is the art of giving clear and focused instructions to an AI to receive the most useful responses.</p>
+      <p>When working on a resume, effective prompting can help you draft sections, rewrite experiences, or tailor content to specific job descriptions.</p>
+
+      <h3>Why Use Resume Prompts?</h3>
+      <ul>
+        <li>Improve resume structure and clarity</li>
+        <li>Tailor your content for specific job roles</li>
+        <li>Rewrite bullet points to sound more impactful</li>
+        <li>Create compelling professional summaries</li>
+      </ul>
+
+      <div class="navigation">
+        <div></div>
+        <div class="arrow" onclick="nextSection(1, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 2: Prompting Techniques -->
+    <section id="section2">
+      <h3>Effective Prompting Techniques</h3>
+      <ul>
+        <li><strong>Be clear:</strong> “Rewrite my experience for a data analyst role.”</li>
+        <li><strong>Be specific:</strong> “Turn this bullet point into an achievement-based statement.”</li>
+        <li><strong>Give context:</strong> “Here’s my experience, and I’m applying for a marketing job.”</li>
+        <li><strong>Request examples:</strong> “Show me 3 ways to describe my Python skills.”</li>
+      </ul>
+
+      <h4>Example Resume Prompt:</h4>
+      <p><em>"Rewrite this job experience in a more professional tone for a LinkedIn profile."</em></p>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(2, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(2, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 3: Personal Info -->
+    <section id="section3">
+      <h3>Personal Information</h3>
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Email:</strong> john.doe@example.com</p>
+      <p><strong>Phone:</strong> +1 (234) 567-8901</p>
+      <p><strong>Location:</strong> City, Country</p>
+      <p><strong>GitHub:</strong> github.com/xx</p>
+      <p><strong>LinkedIn:</strong> linkedin.com/xx</p>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(3, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(3, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 4: Skills -->
+    <section id="section4">
+      <h3>Skills</h3>
+      <ul>
+        <li><strong>Languages:</strong> Python, JavaScript, Java, C++</li>
+        <li><strong>Web Dev:</strong> HTML, CSS, React, Node.js, Angular</li>
+        <li><strong>Databases:</strong> MongoDB, MySQL</li>
+        <li><strong>Tools:</strong> Git, Docker, VS Code</li>
+        <li><strong>Cloud:</strong> AWS, Azure</li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(4, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(4, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 5: Experience -->
+    <section id="section5">
+      <h3>Experience</h3>
+      <ul>
+        <li>
+          <strong>Software Engineer</strong> – ABC Tech (2020–Present)
+          <ul>
+            <li>Built scalable web apps using React and Node.js.</li>
+            <li>Integrated third-party APIs and improved performance.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Intern</strong> – XYZ Corp (2019–2020)
+          <ul>
+            <li>Worked on UI/UX and bug fixes under mentorship.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(5, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(5, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 6: Education -->
+    <section id="section6">
+      <h3>Education</h3>
+      <ul>
+        <li>
+          <strong>B.Sc. in Computer Science</strong> – University of Example (2016–2020)
+          <ul>
+            <li>CGPA: 8.5/10</li>
+            <li>Specialized in Software Engineering</li>
+          </ul>
+        </li>
+        <li><strong>High School</strong> – Example High (2014–2016)</li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(6, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(6, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 7: Projects -->
+    <section id="section7">
+      <h3>Projects</h3>
+      <ul>
+        <li><strong>Portfolio Website</strong> – Personal website showcasing work.</li>
+        <li><strong>Task Manager</strong> – MERN stack task app with login.</li>
+        <li><strong>Weather Dashboard</strong> – Real-time weather app using API.</li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(7, false)">&#8592;</div>
+        <div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Script to Handle Section Navigation -->
+  <script>
+    function nextSection(current, forward = true) {
+      const currentSection = document.getElementById(`section${current}`);
+      let next = forward ? current + 1 : current - 1;
+      if (next < 1) next = 7;
+      if (next > 7) next = 1;
+      const nextSection = document.getElementById(`section${next}`);
+
+      currentSection.classList.remove("active");
+      nextSection.classList.add("active");
+    }
+  </script>
+</body>
+</html>

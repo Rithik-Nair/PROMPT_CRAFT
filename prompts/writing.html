@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Writing PromptCraft</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      color: #222;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 18px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+      padding-top: 80px;
+    }
+
+    section {
+      display: none;
+      background-color: #fff;
+      padding: 40px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: fade 0.4s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h3, h4 {
+      color: #222;
+    }
+
+    ul {
+      padding-left: 20px;
+      opacity: 1 !important;
+      filter: none !important;
+    }
+
+    li {
+      color: #222 !important;
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+      opacity: 1 !important;
+    }
+
+    p {
+      color: #222 !important;
+      font-size: 16px !important;
+      line-height: 1.7 !important;
+      opacity: 1 !important;
+      filter: none !important;
+    }
+
+    .arrow-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .arrow {
+      font-size: 28px;
+      background-color: #007bff;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .arrow:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back to Home -->
+  <a href="../index.html" class="back-button">← Home</a>
+
+  <div class="container">
+    <!-- Section 1 -->
+    <section id="section1" class="active">
+      <h1>Writing Prompts</h1>
+      <p><strong>Writing with AI</strong> involves guiding the model to help you brainstorm, draft, and edit written content effectively.</p>
+      <p>Whether you're writing essays, short stories, or creative fiction, the right prompts can inspire better ideas and structure.</p>
+      <h3>Why Use Writing Prompts?</h3>
+      <ul>
+        <li>Boost creativity and overcome writer's block</li>
+        <li>Generate story plots or character ideas</li>
+        <li>Polish grammar and improve tone</li>
+        <li>Transform raw thoughts into engaging narratives</li>
+      </ul>
+
+      <div class="arrow-nav">
+        <span></span>
+        <div class="arrow" onclick="navigate(1)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="section2">
+      <h3>Prompt Techniques</h3>
+      <ul>
+        <li>Give genre: “Write a sci-fi story about time travel.”</li>
+        <li>Be detailed: “Describe a villain who manipulates dreams.”</li>
+        <li>Set style: “Write in the tone of a Shakespearean monologue.”</li>
+        <li>Ask for structure: “Give me a 3-act structure for a mystery novel.”</li>
+      </ul>
+
+      <h4>Example Prompt:</h4>
+      <p><em>"Turn this story idea into a suspenseful opening paragraph."</em></p>
+
+      <div class="arrow-nav">
+        <div class="arrow" onclick="navigate(0)">&#8592;</div>
+        <div class="arrow" onclick="navigate(2)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="section3">
+      <h3>Types of Writing Supported</h3>
+      <ul>
+        <li>Blog Articles</li>
+        <li>Storytelling / Creative Fiction</li>
+        <li>Poetry and Haiku</li>
+        <li>Scripts and Dialogue</li>
+        <li>Professional Writing (emails, reports)</li>
+      </ul>
+
+      <div class="arrow-nav">
+        <div class="arrow" onclick="navigate(1)">&#8592;</div>
+        <div class="arrow" onclick="navigate(3)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="section4">
+      <h3>Examples</h3>
+      <ul>
+        <li><strong>Prompt:</strong> "Write a haiku about autumn in a city."</li>
+        <li><strong>Prompt:</strong> "Create a dialogue between two rivals at a chess championship."</li>
+        <li><strong>Prompt:</strong> "Summarize this article in 5 bullet points."</li>
+      </ul>
+
+      <div class="arrow-nav">
+        <div class="arrow" onclick="navigate(2)">&#8592;</div>
+        <span></span>
+      </div>
+    </section>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function navigate(index) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(`section${index + 1}`).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>

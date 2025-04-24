@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chatbot PromptCraft</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 18px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+      padding-top: 80px;
+    }
+
+    section {
+      display: none;
+      background-color: #fff;
+      padding: 40px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: fade 0.4s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h3, p, li {
+      color: #222;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      color: #222 !important;
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+      opacity: 1 !important;
+    }
+  
+    p {
+      color: #222 !important;
+      font-size: 16px !important;
+      line-height: 1.7 !important;
+      opacity: 1 !important;
+      filter: none !important;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .arrow {
+      font-size: 28px;
+      background-color: #007bff;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .arrow:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back to Home -->
+  <a href="../index.html" class="back-button">← Home</a>
+
+  <div class="container">
+    <!-- Section 1: Introduction to Chatbots -->
+    <section id="section1" class="active">
+      <h1>Chatbot Prompts</h1>
+      <p><strong>Chatbots</strong> are AI systems designed to simulate conversations with users.</p>
+      <p>They can be used in customer service, education, entertainment, and more. Effective prompts help chatbots understand user requests and respond more effectively.</p>
+
+      <h3>Why Use Chatbots?</h3>
+      <ul>
+        <li>Enhance user engagement</li>
+        <li>Provide quick and accurate responses</li>
+        <li>Automate customer support</li>
+        <li>Offer 24/7 assistance</li>
+      </ul>
+
+      <div class="navigation">
+        <div></div>
+        <div class="arrow" onclick="nextSection(1, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 2: Types of Chatbots -->
+    <section id="section2">
+      <h3>Types of Chatbots</h3>
+      <ul>
+        <li><strong>Rule-based chatbots:</strong> Respond based on predefined rules and scripts.</li>
+        <li><strong>AI-powered chatbots:</strong> Use machine learning to understand and generate responses.</li>
+        <li><strong>Hybrid chatbots:</strong> Combine rule-based and AI-driven elements for better flexibility.</li>
+      </ul>
+
+      <h4>Example Chatbot Prompt:</h4>
+      <p><em>"Please assist me with my order status."</em></p>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(2, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(2, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 3: Building Chatbots -->
+    <section id="section3">
+      <h3>How to Build a Chatbot</h3>
+      <p>To build a chatbot, you need to follow these steps:</p>
+      <ul>
+        <li><strong>Step 1:</strong> Identify the purpose of your chatbot (customer service, education, etc.).</li>
+        <li><strong>Step 2:</strong> Choose a platform for development (Dialogflow, Rasa, etc.).</li>
+        <li><strong>Step 3:</strong> Define intents and actions based on user needs.</li>
+        <li><strong>Step 4:</strong> Train the chatbot with sample conversations.</li>
+        <li><strong>Step 5:</strong> Test and refine the chatbot's responses.</li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(3, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(3, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 4: Use Cases of Chatbots -->
+    <section id="section4">
+      <h3>Use Cases for Chatbots</h3>
+      <ul>
+        <li><strong>Customer Support:</strong> Answer FAQs, resolve issues, and offer live chat assistance.</li>
+        <li><strong>Healthcare:</strong> Schedule appointments, offer medical advice (within limits), and track patient progress.</li>
+        <li><strong>Education:</strong> Provide tutoring, answer student questions, and guide through learning resources.</li>
+        <li><strong>Entertainment:</strong> Create interactive experiences for users through gaming, storytelling, and quizzes.</li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(4, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(4, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 5: Enhancing Chatbot Performance -->
+    <section id="section5">
+      <h3>Enhancing Chatbot Performance</h3>
+      <ul>
+        <li><strong>Use NLP:</strong> Improve understanding by incorporating Natural Language Processing.</li>
+        <li><strong>Continuous Learning:</strong> Allow the chatbot to learn from new interactions.</li>
+        <li><strong>Personalization:</strong> Customize responses based on user preferences and history.</li>
+        <li><strong>Multi-channel Support:</strong> Integrate the chatbot into websites, mobile apps, and social media platforms.</li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(5, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(5, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 6: Ethical Considerations -->
+    <section id="section6">
+      <h3>Ethical Considerations for Chatbots</h3>
+      <p><strong>Transparency:</strong> Always let users know they are interacting with a bot.</p>
+      <p><strong>Privacy:</strong> Ensure that personal data is protected and not misused.</p>
+      <p><strong>Accuracy:</strong> Make sure the chatbot provides correct and reliable information.</p>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(6, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(6, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 7: Review and Future of Chatbots -->
+    <section id="section7">
+      <h3>Review and Future of Chatbots</h3>
+      <p>Chatbots are transforming industries by automating tasks and providing real-time assistance. As technology advances, we can expect more sophisticated AI-driven bots capable of understanding complex human emotions and preferences.</p>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(7, false)">&#8592;</div>
+        <div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Script to Handle Section Navigation -->
+  <script>
+    function nextSection(current, forward = true) {
+      const currentSection = document.getElementById(`section${current}`);
+      let next = forward ? current + 1 : current - 1;
+      if (next < 1) next = 7;
+      if (next > 7) next = 1;
+      const nextSection = document.getElementById(`section${next}`);
+
+      currentSection.classList.remove("active");
+      nextSection.classList.add("active");
+    }
+  </script>
+</body>
+</html>

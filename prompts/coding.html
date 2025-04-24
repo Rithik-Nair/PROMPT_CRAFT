@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coding PromptCraft</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 18px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+      padding-top: 80px;
+    }
+
+    section {
+      display: none;
+      background-color: #fff;
+      padding: 40px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: fade 0.4s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h3, p, li {
+      color: #222;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      color: #222 !important;
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+      opacity: 1 !important;
+    }
+  
+    p {
+      color: #222 !important;
+      font-size: 16px !important;
+      line-height: 1.7 !important;
+      opacity: 1 !important;
+      filter: none !important;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .arrow {
+      font-size: 28px;
+      background-color: #007bff;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .arrow:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back to Home -->
+  <a href="../index.html" class="back-button">← Home</a>
+
+  <div class="container">
+    <!-- Section 1: Introduction to Coding -->
+    <section id="section1" class="active">
+      <h1>Coding Prompts</h1>
+      <p><strong>Prompting</strong> is the process of providing clear instructions to an AI to guide its coding or problem-solving responses.</p>
+      <p>Effective prompting helps you solve coding problems faster, debug code, or improve your algorithms.</p>
+
+      <h3>Why Use Coding Prompts?</h3>
+      <ul>
+        <li>Generate code snippets or templates</li>
+        <li>Optimize algorithms for performance</li>
+        <li>Debug and troubleshoot code</li>
+        <li>Understand complex coding concepts</li>
+      </ul>
+
+      <div class="navigation">
+        <div></div>
+        <div class="arrow" onclick="nextSection(1, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 2: Coding Techniques -->
+    <section id="section2">
+      <h3>Effective Coding Techniques</h3>
+      <ul>
+        <li><strong>Be clear:</strong> “Generate a Python function that sorts a list of numbers in ascending order.”</li>
+        <li><strong>Be specific:</strong> “Write a function to find the nth Fibonacci number using recursion.”</li>
+        <li><strong>Provide context:</strong> “Here’s a function that works, but I need it to be more efficient.”</li>
+        <li><strong>Ask for examples:</strong> “Show me an example of binary search in Java.”</li>
+      </ul>
+
+      <h4>Example Coding Prompt:</h4>
+      <p><em>"Write a function to reverse a string in Python."</em></p>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(2, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(2, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 3: Personal Coding Info -->
+    <section id="section3">
+      <h3>Personal Coding Info</h3>
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Programming Languages:</strong> Python, JavaScript, Java, C++</p>
+      <p><strong>GitHub:</strong> github.com/xx</p>
+      <p><strong>Projects:</strong> Portfolio Website, Task Manager, Weather Dashboard</p>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(3, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(3, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 4: Code Samples -->
+    <section id="section4">
+      <h3>Code Samples</h3>
+      <ul>
+        <li><strong>Sorting Algorithm (Python):</strong> Bubble Sort, Merge Sort, Quick Sort</li>
+        <li><strong>Search Algorithm (JavaScript):</strong> Linear Search, Binary Search</li>
+        <li><strong>Data Structures:</strong> Arrays, Linked Lists, Stacks, Queues, Trees</li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(4, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(4, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 5: Coding Challenges -->
+    <section id="section5">
+      <h3>Coding Challenges</h3>
+      <ul>
+        <li>
+          <strong>Challenge 1:</strong> Create a function to check if a number is prime.
+        </li>
+        <li>
+          <strong>Challenge 2:</strong> Implement a simple to-do list using JavaScript and local storage.
+        </li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(5, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(5, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 6: Advanced Topics -->
+    <section id="section6">
+      <h3>Advanced Topics</h3>
+      <ul>
+        <li><strong>Machine Learning:</strong> Supervised vs. Unsupervised Learning, Algorithms like KNN, SVM</li>
+        <li><strong>Web Development:</strong> React, Node.js, Express, REST APIs</li>
+        <li><strong>Algorithms:</strong> Graphs, Dynamic Programming, Backtracking</li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(6, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(6, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 7: Code Review -->
+    <section id="section7">
+      <h3>Code Review</h3>
+      <p>Review code for style, structure, and performance. Ensure code is well-documented, easy to read, and follows best practices.</p>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(7, false)">&#8592;</div>
+        <div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Script to Handle Section Navigation -->
+  <script>
+    function nextSection(current, forward = true) {
+      const currentSection = document.getElementById(`section${current}`);
+      let next = forward ? current + 1 : current - 1;
+      if (next < 1) next = 7;
+      if (next > 7) next = 1;
+      const nextSection = document.getElementById(`section${next}`);
+
+      currentSection.classList.remove("active");
+      nextSection.classList.add("active");
+    }
+  </script>
+</body>
+</html>

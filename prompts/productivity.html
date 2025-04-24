@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productivity PromptCraft</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 18px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+      padding-top: 80px;
+    }
+
+    section {
+      display: none;
+      background-color: #fff;
+      padding: 40px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: fade 0.4s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h3, p, li {
+      color: #222;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      color: #222 !important;
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+      opacity: 1 !important;
+    }
+  
+    p {
+      color: #222 !important;
+      font-size: 16px !important;
+      line-height: 1.7 !important;
+      opacity: 1 !important;
+      filter: none !important;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .arrow {
+      font-size: 28px;
+      background-color: #007bff;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .arrow:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back to Home -->
+  <a href="../index.html" class="back-button">← Home</a>
+
+  <div class="container">
+    <!-- Section 1: Introduction to Productivity -->
+    <section id="section1" class="active">
+      <h1>Productivity Prompts</h1>
+      <p><strong>Productivity</strong> is the ability to complete tasks efficiently and effectively.</p>
+      <p>Using the right prompts can help optimize your work processes, break tasks into manageable steps, and keep you focused on high-priority activities.</p>
+
+      <h3>Why Use Productivity Prompts?</h3>
+      <ul>
+        <li>Increase task efficiency</li>
+        <li>Break large tasks into smaller steps</li>
+        <li>Track time effectively</li>
+        <li>Enhance focus and reduce distractions</li>
+      </ul>
+
+      <div class="navigation">
+        <div></div>
+        <div class="arrow" onclick="nextSection(1, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 2: Productivity Techniques -->
+    <section id="section2">
+      <h3>Effective Productivity Techniques</h3>
+      <ul>
+        <li><strong>Time blocking:</strong> Schedule focused work periods.</li>
+        <li><strong>Prioritization:</strong> Identify the most important tasks first.</li>
+        <li><strong>Task batching:</strong> Group similar tasks together.</li>
+        <li><strong>Pomodoro Technique:</strong> Use short sprints of work with breaks.</li>
+      </ul>
+
+      <h4>Example Productivity Prompt:</h4>
+      <p><em>"Create a 2-hour task list for writing a blog post."</em></p>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(2, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(2, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 3: Personal Goals -->
+    <section id="section3">
+      <h3>Personal Goals</h3>
+      <p><strong>Goal 1:</strong> Write 3 blog posts per month.</p>
+      <p><strong>Goal 2:</strong> Complete a certification course by the end of the year.</p>
+      <p><strong>Goal 3:</strong> Increase daily workout routine to 30 minutes.</p>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(3, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(3, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 4: Time Management -->
+    <section id="section4">
+      <h3>Time Management</h3>
+      <ul>
+        <li><strong>Morning Routine:</strong> 6:00 AM - 7:00 AM</li>
+        <li><strong>Work Blocks:</strong> 9:00 AM - 12:00 PM</li>
+        <li><strong>Lunch Break:</strong> 12:00 PM - 1:00 PM</li>
+        <li><strong>Afternoon Work:</strong> 1:00 PM - 5:00 PM</li>
+        <li><strong>Evening Reflection:</strong> 7:00 PM - 8:00 PM</li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(4, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(4, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 5: Tools for Productivity -->
+    <section id="section5">
+      <h3>Productivity Tools</h3>
+      <ul>
+        <li><strong>Todoist:</strong> Task manager for planning and organizing tasks.</li>
+        <li><strong>Trello:</strong> Visual tool for project management.</li>
+        <li><strong>Notion:</strong> All-in-one workspace for notes and project tracking.</li>
+        <li><strong>RescueTime:</strong> Track time spent on various applications and websites.</li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(5, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(5, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 6: Work-Life Balance -->
+    <section id="section6">
+      <h3>Work-Life Balance</h3>
+      <p><strong>Work-life balance</strong> is key to sustaining long-term productivity. Make time for hobbies, exercise, and spending time with loved ones.</p>
+      <ul>
+        <li><strong>Set boundaries:</strong> Don't overwork.</li>
+        <li><strong>Take breaks:</strong> Avoid burnout by taking regular breaks.</li>
+        <li><strong>Delegate tasks:</strong> Don’t take on too much.</li>
+      </ul>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(6, false)">&#8592;</div>
+        <div class="arrow" onclick="nextSection(6, true)">&#8594;</div>
+      </div>
+    </section>
+
+    <!-- Section 7: Review and Action -->
+    <section id="section7">
+      <h3>Review and Action</h3>
+      <p>Review your progress weekly to adjust your productivity methods. Ensure your goals are on track and adjust your time management strategies as needed.</p>
+
+      <div class="navigation">
+        <div class="arrow" onclick="nextSection(7, false)">&#8592;</div>
+        <div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Script to Handle Section Navigation -->
+  <script>
+    function nextSection(current, forward = true) {
+      const currentSection = document.getElementById(`section${current}`);
+      let next = forward ? current + 1 : current - 1;
+      if (next < 1) next = 7;
+      if (next > 7) next = 1;
+      const nextSection = document.getElementById(`section${next}`);
+
+      currentSection.classList.remove("active");
+      nextSection.classList.add("active");
+    }
+  </script>
+</body>
+</html>
