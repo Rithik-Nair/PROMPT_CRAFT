@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Prompt Engineering Portfolio
 This repository showcases my work in Prompt Engineering and demonstrates my skills in AI, Natural Language Processing (NLP), and Machine Learning (ML). I have worked on projects that involve designing prompts for large language models, improving interaction with AI, and enhancing the response quality in various use cases.
 
@@ -37,3 +38,6 @@ Email: knrithiknair@gmail.com
 LinkedIn: https://www.linkedin.com/in/rithik-nair-19224a256
 
 GitHub: your-github
+=======
+# PROMPT_CRAFT
+>>>>>>> 691a1258aa6e9e08d5885372d6984f9927ea2756
